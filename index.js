@@ -1,5 +1,10 @@
 const inquirer = require ('inquirer');
 const fs = require ('fs');
+const Manager = require ('./lib/Manager');
+const Engineer = require ('./lib/Engineer');
+const Intern = require ('./lib/Intern');
+const employee = [] ;
+
 const managerQuestions = [
     {
        type : 'input',
@@ -96,8 +101,39 @@ const engineerQuestions = [
      ,
      {
         type : 'input',
-        name : 'github username',
+        name : 'github',
         message : 'Please enter your github username?',
      }
 ]
-inquirer.prompt
+function addManager(){
+    inquirer.prompt(managerQuestions)
+.then ((response) => {
+    console.log(response);
+    const manager = new Manager(response.name, response.id, response.email, response.office)
+    employee.push(manager);
+    // console.log(employee);
+    inquirer.prompt()
+//   fs.writeFile ()
+});
+}
+function addEngineer(){
+    inquirer.prompt(engineerQuestions)
+.then ((response) => {
+    console.log(response);
+    const engineer = new Engineer(response.name, response.id, response.email, response.github)
+    employee.push(engineer);
+    console.log(employee);
+//   fs.writeFile ()
+});
+}
+function addIntern(){
+    inquirer.prompt(internQuestions)
+.then ((response) => {
+    console.log(response);
+    const intern = new Intern(response.name, response.id, response.email, response.school)
+    employee.push(intern);
+    console.log(employee);
+//   fs.writeFile ()
+});
+}
+
