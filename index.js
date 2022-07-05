@@ -3,53 +3,38 @@ const fs = require("fs");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+// const generateHtml = require ("./dist");
+
 //Collecting the data of manager,engineer and intern and pushing it into an array employee.
-const employee = [];
+const teamMembers = [];
 //questions array for manager
 const managerQuestions = [
   {
     type: "input",
     name: "name",
-    message: "Please enter your team managers name?",
+    message: "Please enter your managers name?",
   },
   {
     type: "input",
     name: "id",
-    message: "Please enter your employee ID?",
+    message: "Please enter your manager's employee ID?",
   },
   {
     type: "input",
     name: "address",
-    message: "Please enter your email address?",
+    message: "Please enter your manager's email address?",
   },
   {
     type: "input",
     name: "office",
-    message: "Please enter your office number?",
-  },
-];
-//questions array for employee
-const employeeQuestions = [
-  {
-    type: "input",
-    name: "name",
-    message: "Please enter your team managers name?",
+    message: "Please enter your manager's office number?",
   },
   {
-    type: "input",
-    name: "id",
-    message: "Please enter your employee ID?",
-  },
-  {
-    type: "input",
-    name: "address",
-    message: "Please enter your email address?",
-  },
-  {
-    type: "input",
-    name: "office",
-    message: "Please enter your office number?",
-  },
+    type: "list",
+    name: "addEmployee",
+    message: "Who would you like to add ?",
+    choices: ['Engineer','Intern','None'],
+  }
 ];
 //questions array for intern
 const internQuestions = [
@@ -106,10 +91,7 @@ function addManager() {
       response.email,
       response.office
     );
-    employee.push(manager);
-    console.log(employee);
-    inquirer.prompt();
-    //   fs.writeFile ()
+    teamMembers.push(manager);
   });
 }
 function addEngineer() {
@@ -121,9 +103,7 @@ function addEngineer() {
       response.email,
       response.github
     );
-    employee.push(engineer);
-    console.log(employee);
-    //   fs.writeFile ()
+    teamMembers.push(engineer);
   });
 }
 function addIntern() {
@@ -135,8 +115,7 @@ function addIntern() {
       response.email,
       response.school
     );
-    employee.push(intern);
-    console.log(employee);
-    //   fs.writeFile ()
+    teamMembers.push(intern);
   });
 }
+
