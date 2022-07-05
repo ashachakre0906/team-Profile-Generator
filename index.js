@@ -3,8 +3,9 @@ const fs = require("fs");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+//Collecting the data of manager,engineer and intern and pushing it into an array employee.
 const employee = [];
-
+//questions array for manager
 const managerQuestions = [
   {
     type: "input",
@@ -27,6 +28,7 @@ const managerQuestions = [
     message: "Please enter your office number?",
   },
 ];
+//questions array for employee
 const employeeQuestions = [
   {
     type: "input",
@@ -49,6 +51,7 @@ const employeeQuestions = [
     message: "Please enter your office number?",
   },
 ];
+//questions array for intern
 const internQuestions = [
   {
     type: "input",
@@ -71,6 +74,7 @@ const internQuestions = [
     message: "Please enter your school name?",
   },
 ];
+//questions array for engineer
 const engineerQuestions = [
   {
     type: "input",
@@ -103,7 +107,7 @@ function addManager() {
       response.office
     );
     employee.push(manager);
-    // console.log(employee);
+    console.log(employee);
     inquirer.prompt();
     //   fs.writeFile ()
   });
