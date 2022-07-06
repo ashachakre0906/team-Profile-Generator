@@ -164,6 +164,9 @@ function addIntern() {
 }
 addManager();
 //function when user selects 'none' from the choices
+function generateHTML(){
+  
+}
 
 
 
