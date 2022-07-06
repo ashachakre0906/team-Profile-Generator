@@ -30,12 +30,6 @@ const managerQuestions = [
     message: "Please enter your office number?",
   },
   {
-    type: "input",
-    name: "role",
-    message: "what is your role?",   
-  }
-  ,
-  {
     type: "list",
     name: "addEmployee",
     message: "Who would you like to add next?",
@@ -108,7 +102,6 @@ function addManager() {
           managerResponse.id,
           managerResponse.email,
           managerResponse.office,
-          managerResponse.role,
       );
       teamMembers.push(manager);
       switch (managerResponse.addEmployee){
@@ -121,7 +114,6 @@ function addManager() {
       }
     });
   }
-
 function addEngineer() {
   inquirer.prompt(engineerQuestions).then((engineerResponse) => {
     console.log(engineerResponse);
@@ -162,5 +154,10 @@ function addIntern() {
       }
   });
 }
-//function to exit the app
+addManager();
+//function when user selects 'none' from the choices
+
+
+
+
 
