@@ -3,7 +3,8 @@ const fs = require("fs");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-// const generateTeam = require ("./dist/index.html");
+// const generateT = ("./dist/index.html");
+const path = require ('path');
 
 //Collecting the data of manager,engineer and intern and pushing it into an array employee.
 const teamMembers = [];
@@ -111,6 +112,8 @@ function addManager() {
         case  'Intern':
             addIntern();
             break;
+        default : 
+        return ; //stop the function         
       }
     });
   }
@@ -131,6 +134,9 @@ function addEngineer() {
         case  'Intern':
             addIntern();
             break;
+        default : 
+        return ; //stop the function
+
       }
   });
 }
@@ -151,11 +157,14 @@ function addIntern() {
         case  'Intern':
             addIntern();
             break;
+        default : 
+        return ; //stop the function
       }
   });
 }
 addManager();
 //function when user selects 'none' from the choices
+
 
 
 
