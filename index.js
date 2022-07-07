@@ -13,28 +13,28 @@ const managerQuestions = [
   {
     type: "input",
     name: "name",
-    message: "Please enter your name?",
+    message: "Please enter your name?(Required)",
   },
   {
     type: "input",
     name: "id",
-    message: "Please enter your employee ID?",
+    message: "Please enter your employee ID(Required)?",
   },
   {
     type: "input",
-    name: "address",
-    message: "Please enter your email address?",
+    name: "emailaddress",
+    message: "Please enter your email address(Required)?",
   },
   {
     type: "input",
     name: "office",
-    message: "Please enter your office number?",
+    message: "Please enter your office number(Required)?",
   },
   {
     type: "list",
     name: "addEmployee",
     message: "Who would you like to add next?",
-    choices: ['Engineer','Intern','None'],
+    choices: ['Engineer','Intern','finish building the team'],
   }
 ];
 //questions array for engineer
@@ -42,28 +42,28 @@ const engineerQuestions = [
     {
       type: "input",
       name: "name",
-      message: "Please enter your name?",
+      message: "Please enter your name(Required)?",
     },
     {
       type: "input",
       name: "id",
-      message: "Please enter your employee ID?",
+      message: "Please enter your employee ID(Required)?",
     },
     {
       type: "input",
-      name: "address",
-      message: "Please enter your email address?",
+      name: "emailaddress",
+      message: "Please enter your email address(Required)?",
     },
     {
       type: "input",
       name: "github",
-      message: "Please enter your github username?",
+      message: "Please enter your github username(Required)?",
     },
     {
       type: "list",
       name: "addEmployee",
-      message: "Who would you like to add next?",
-      choices: ['Engineer','Intern','None'],
+      message: "Who would you like to add next(Required)?",
+      choices: ['Engineer','Intern','finish building the team'],
     }
   ];
   //questions array for intern
@@ -71,28 +71,28 @@ const internQuestions = [
     {
       type: "input",
       name: "name",
-      message: "Please enter your name?",
+      message: "Please enter your name(Required)?",
     },
     {
       type: "input",
       name: "id",
-      message: "Please enter your employee ID?",
+      message: "Please enter your employee ID(Required)?",
     },
     {
       type: "input",
-      name: "address",
-      message: "Please enter your email address?",
+      name: "emailaddress",
+      message: "Please enter your email address(Required)?",
     },
     {
       type: "input",
       name: "school",
-      message: "Please enter your school name?",
+      message: "Please enter your school name(Required)?",
     },
     {
         type: "list",
         name: "addEmployee",
         message: "Who would you like to add next?",
-        choices: ['Engineer','Intern','None'],
+        choices: ['Engineer','Intern','finish building the team'],
       }
   ];
 function addManager() {
@@ -101,7 +101,7 @@ function addManager() {
       const manager = new Manager(
           managerResponse.name,
           managerResponse.id,
-          managerResponse.email,
+          managerResponse.emailaddress,
           managerResponse.office,
       );
       teamMembers.push(manager);
@@ -123,7 +123,7 @@ function addEngineer() {
     const engineer = new Engineer(
         engineerResponse.name,
         engineerResponse.id,
-        engineerResponse.email,
+        engineerResponse.emailaddress,
         engineerResponse.github
     );
     teamMembers.push(engineer);
@@ -142,11 +142,10 @@ function addEngineer() {
 }
 function addIntern() {
   inquirer.prompt(internQuestions).then((internResponse) => {
-    // console.log(response);
     const intern = new Intern(
         internResponse.name,
         internResponse.id,
-        internResponse.email,
+        internResponse.emailaddress,
         internResponse.school
     );
     teamMembers.push(intern);

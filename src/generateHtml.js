@@ -1,9 +1,11 @@
 let cards = "";
+console.log(cards);
 function generateCards(data) {
   for (let i = 0; i < data.length; i++) {
     if (data[i].getRole() == "Manager") {
     var str = `
     <div class="card mb-3" style="max-width: 18rem;">
+            <h3>${data[i].getName()}</h3>
             <div class="card-header">Manager<br><i class="fa-solid fa-mug-hot"></i>
             </div>
             <div class="card-body text-dark">
@@ -11,8 +13,8 @@ function generateCards(data) {
               <p class="card-text"></p>
               <ul class="list-group">
                 <li class="list-group-item">id:${data[i].getId()} </li>
-                <li class="list-group-item">Email:</li>
-                <li class="list-group-item">Office number:</li>
+                <li class="list-group-item">Email:${data[i].getEmail()}</li>
+                <li class="list-group-item">Office number:${data[i].getOfficeNumber()}</li>
               </ul>
             </div>
           </div>
@@ -20,7 +22,22 @@ function generateCards(data) {
     cards += str
     }
     else if (data[i].getRole() == "Engineer"){
-      
+      var str = `
+      <div class="card mb-3" style="max-width: 18rem;">
+            <h3>${data[i].getName()}</h3>
+            <div class="card-header">Engineer<br><i class="fa-solid fa-glasses"></i></div>
+            <div class="card-body text-dark">
+              <h5 class="card-title"></h5>
+              <p class="card-text"></p>
+              <ul class="list-group">
+                <li class="list-group-item">id:${data[i].getId()} </li>
+                <li class="list-group-item">Email:${data[i].getEmail()}</li>
+                <li class="list-group-item">GitHub:${data[i].getGitHub()}</li>
+              </ul>
+            </div>
+          </div>
+      `
+      cards += str
     }
   }
   return cards ;
@@ -36,7 +53,7 @@ module.exports = (teamMembers) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel ="stylesheet" href = "./assets/css/style.css">
+        <link rel ="stylesheet" href = "../src/assets/css/style.css">
         <title>Team Profile Generator</title>
     </head>
     <body>
@@ -46,7 +63,8 @@ module.exports = (teamMembers) => {
             </span>
         </nav>
         <div class ="card-container">
-         ${generateCards(teamMembers)}
+        ${generateCards(teamMembers)}
+            <h3></h3>
             <div class="card mb-3" style="max-width: 18rem;">
             <div class="card-header">Manager<br><i class="fa-solid fa-mug-hot"></i>
             </div>
@@ -61,6 +79,7 @@ module.exports = (teamMembers) => {
             </div>
           </div>
           <div class="card mb-3" style="max-width: 18rem;">
+            <h3></h3>
             <div class="card-header">Engineer<br><i class="fa-solid fa-glasses"></i></div>
             <div class="card-body text-dark">
               <h5 class="card-title"></h5>
@@ -73,6 +92,7 @@ module.exports = (teamMembers) => {
             </div>
           </div>
           <div class="card mb-3" style="max-width: 18rem;">
+          <h3></h3>
             <div class="card-header">Intern<br><i class="fa-solid fa-user-graduate"></i></div>
             <div class="card-body text-dark">
               <h5 class="card-title"></h5>
