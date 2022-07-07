@@ -81,5 +81,5 @@ We dont have any test at this moment.
 ![Inquirer Badge](https://img.shields.io/badge/language-Inquirer-orange.svg)
 
 ## Questions
-Github Repo URL: [Github](https://github.com/ashachakre0906team-Profile-Generator)<br>
+Github Repo URL: [Github](https://github.com/ashachakre0906/team-Profile-Generator)<br>
 
