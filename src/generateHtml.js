@@ -5,15 +5,14 @@ function generateCards(data) {
     if (data[i].getRole() == "Manager") {
     var str = `
     <div class="card mb-3" style="max-width: 18rem;">
-            <h3>${data[i].getName()}</h3>
-            <div class="card-header">Manager<br><i class="fa-solid fa-mug-hot"></i>
+            <div class="card-header"><h3>${data[i].getName()}</h3><i class="fa-solid fa-mug-hot"></i> Manager
             </div>
             <div class="card-body text-dark">
               <h5 class="card-title"></h5>
               <p class="card-text"></p>
               <ul class="list-group">
-                <li class="list-group-item">id:${data[i].getId()} </li>
-                <li class="list-group-item">Email:${data[i].getEmail()}</li>
+                <li class="list-group-item">id:${data[i].getId()}</li>
+                <li class="list-group-item">Email:<a href = "mailto:">${data[i].getEmail()}</a></li>
                 <li class="list-group-item">Office number:${data[i].getOfficeNumber()}</li>
               </ul>
             </div>
@@ -24,15 +23,14 @@ function generateCards(data) {
     else if (data[i].getRole() == "Engineer"){
       var str = `
       <div class="card mb-3" style="max-width: 18rem;">
-            <h3>${data[i].getName()}</h3>
-            <div class="card-header">Engineer<br><i class="fa-solid fa-glasses"></i></div>
+            <div class="card-header"><h3>${data[i].getName()}</h3><br><i class="fa-solid fa-glasses"></i> Engineer</div>
             <div class="card-body text-dark">
               <h5 class="card-title"></h5>
               <p class="card-text"></p>
               <ul class="list-group">
-                <li class="list-group-item">id:${data[i].getId()} </li>
-                <li class="list-group-item">Email:${data[i].getEmail()}</li>
-                <li class="list-group-item">GitHub:${data[i].getGitHub()}</li>
+                <li class="list-group-item">id:${data[i].getId()}</li>
+                <li class="list-group-item">Email:<a href = "mailto:">${data[i].getEmail()}</a></li>
+                <li class="list-group-item">GitHub:<a href = "https://github.com/ashachakre0906">${data[i].getGitHub()}</a></li>
               </ul>
             </div>
           </div>
@@ -43,13 +41,13 @@ function generateCards(data) {
       var str = `
       <div class="card mb-3" style="max-width: 18rem;">
             <h3></h3>
-          <div class="card-header">Intern<br><i class="fa-solid fa-user-graduate"></i></div>
+          <div class="card-header"><h3>${data[i].getName()}</h3><br><i class="fa-solid fa-user-graduate"> Intern</i></div>
             <div class="card-body text-dark">
               <h5 class="card-title"></h5>
               <p class="card-text"></p>
               <ul class="list-group">
-                <li class="list-group-item">id: </li>
-                <li class="list-group-item">Email:</li>
+              <li class="list-group-item">id:${data[i].getId()}</li>
+              <li class="list-group-item">Email:<a href = "mailto:">${data[i].getEmail()}</a></li>
                 <li class="list-group-item">School:</li>
               </ul>
             </div>
