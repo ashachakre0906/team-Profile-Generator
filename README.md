@@ -77,7 +77,7 @@ We dont have any test at this moment.
 ## Technologies Used
 ![Javascript Badge](https://img.shields.io/badge/language-Javascript-blue.svg)
 ![Node.js Badge](https://img.shields.io/badge/language-Node-yellow.svg)
-![Express.js Badge](https://img.shields.io/badge/language-Node-blue.svg)
+![Express.js Badge](https://img.shields.io/badge/language-Express-blue.svg)
 ![Inquirer Badge](https://img.shields.io/badge/language-Inquirer-orange.svg)
 
 ## Questions
