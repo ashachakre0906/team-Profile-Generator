@@ -6,7 +6,7 @@ const Intern = require("./lib/Intern");
 const generateHtml = require("./src/generateHtml.js");
 const path = require ('path');
 
-//Collecting the data of manager,engineer and intern and pushing it into an array employee.
+//Collecting the data of manager,engineer and intern and pushing it into an array teamMembers.
 const teamMembers = [];
 //questions array for manager
 const managerQuestions = [

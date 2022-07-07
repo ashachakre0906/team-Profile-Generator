@@ -12,7 +12,7 @@ function generateCards(data) {
               <p class="card-text"></p>
               <ul class="list-group">
                 <li class="list-group-item">id:${data[i].getId()}</li>
-                <li class="list-group-item">Email:<a href = "mailto:">${data[i].getEmail()}</a></li>
+                <li class="list-group-item">Email:<a href = "mailto:${data[i].getEmail()}"</a></li>
                 <li class="list-group-item">Office number:${data[i].getOfficeNumber()}</li>
               </ul>
             </div>
@@ -28,7 +28,7 @@ function generateCards(data) {
               <p class="card-text"></p>
               <ul class="list-group">
                 <li class="list-group-item">id:${data[i].getId()}</li>
-                <li class="list-group-item">Email:<a href = "mailto:">${data[i].getEmail()}</a></li>
+                <li class="list-group-item">Email:<a href = "mailto:${data[i].getEmail()}"</a></li>
                 <li class="list-group-item">GitHub:<a href = "https://github.com/ashachakre0906">${data[i].getGitHub()}</a></li>
               </ul>
             </div>
@@ -44,7 +44,7 @@ function generateCards(data) {
               <p class="card-text"></p>
               <ul class="list-group">
                 <li class="list-group-item">id:${data[i].getId()}</li>
-                <li class="list-group-item">Email:<a href = "mailto:">${data[i].getEmail()}</a></li>
+                <li class="list-group-item">Email:<a href = "mailto:${data[i].getEmail()}"</a></li>
                 <li class="list-group-item">School:${data[i].getSchool()}</li>
               </ul>
             </div>
@@ -85,7 +85,7 @@ module.exports = (teamMembers) => {
           <p class="card-text"></p>
           <ul class="list-group">
             <li class="list-group-item">id:</li>
-            <li class="list-group-item">Email:<a href = "mailto:"></a></li>
+            <li class="list-group-item">Email:<a href = "mailto:"</a></li>
             <li class="list-group-item">Office number:</li>
           </ul>
         </div>
@@ -97,7 +97,7 @@ module.exports = (teamMembers) => {
               <p class="card-text"></p>
               <ul class="list-group">
                 <li class="list-group-item">id:</li>
-                <li class="list-group-item">Email:<a href = "mailto:"></a></li>
+                <li class="list-group-item">Email:<a href = "mailto:"</a></li>
                 <li class="list-group-item">GitHub:<a href = "https://github.com/ashachakre0906"></a></li>
               </ul>
             </div>
@@ -109,7 +109,7 @@ module.exports = (teamMembers) => {
             <p class="card-text"></p>
             <ul class="list-group">
             <li class="list-group-item">id:</li>
-            <li class="list-group-item">Email:<a href = "mailto:"></a></li>
+            <li class="list-group-item">Email:<a href = "mailto:"</a></li>
               <li class="list-group-item">School:</li>
             </ul>
           </div>
