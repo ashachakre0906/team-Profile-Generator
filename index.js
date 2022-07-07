@@ -3,7 +3,7 @@ const fs = require("fs");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-// const generateT = ("./dist/index.html");
+const generateHtml = require("./src/generateHtml.js");
 const path = require ('path');
 
 //Collecting the data of manager,engineer and intern and pushing it into an array employee.
@@ -113,7 +113,7 @@ function addManager() {
             addIntern();
             break;
         default : 
-        return ; //stop the function         
+        return writeToFile(teamMembers);       
       }
     });
   }
@@ -135,14 +135,14 @@ function addEngineer() {
             addIntern();
             break;
         default : 
-        return ; //stop the function
+        return writeToFile(teamMembers);       
 
       }
   });
 }
 function addIntern() {
   inquirer.prompt(internQuestions).then((internResponse) => {
-    console.log(response);
+    // console.log(response);
     const intern = new Intern(
         internResponse.name,
         internResponse.id,
@@ -158,15 +158,20 @@ function addIntern() {
             addIntern();
             break;
         default : 
-        return ; //stop the function
+        return writeToFile(teamMembers);    
       }
   });
 }
-addManager();
-//function when user selects 'none' from the choices
-function generateHTML(){
-  
-}
+ addManager();
+function writeToFile(data) {
+fs.writeFile('./dist/index.html', generateHtml(data),'utf-8',(err) =>{
+  if (err)
+  console.log(err);
+  else {
+      console.log('"Success! Your team profile has been generated"')
+  }
+})
+};
 
 
 
