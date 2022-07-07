@@ -39,6 +39,24 @@ function generateCards(data) {
       `
       cards += str
     }
+    else if (data[i].getRole() == "Intern"){
+      var str = `
+      <div class="card mb-3" style="max-width: 18rem;">
+            <h3></h3>
+          <div class="card-header">Intern<br><i class="fa-solid fa-user-graduate"></i></div>
+            <div class="card-body text-dark">
+              <h5 class="card-title"></h5>
+              <p class="card-text"></p>
+              <ul class="list-group">
+                <li class="list-group-item">id: </li>
+                <li class="list-group-item">Email:</li>
+                <li class="list-group-item">School:</li>
+              </ul>
+            </div>
+          </div>
+      </div>
+     `
+    }
   }
   return cards ;
 }
@@ -92,8 +110,8 @@ module.exports = (teamMembers) => {
             </div>
           </div>
           <div class="card mb-3" style="max-width: 18rem;">
-          <h3></h3>
-            <div class="card-header">Intern<br><i class="fa-solid fa-user-graduate"></i></div>
+              <h3></h3>
+             <div class="card-header">Intern<br><i class="fa-solid fa-user-graduate"></i></div>
             <div class="card-body text-dark">
               <h5 class="card-title"></h5>
               <p class="card-text"></p>
