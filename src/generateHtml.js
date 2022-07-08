@@ -3,24 +3,24 @@ console.log(cards);
 function generateCards(data) {
   for (let i = 0; i < data.length; i++) {
     if (data[i].getRole() == "Manager") {
-      var str = `
+      let str = `
     <div class="card mb-3" style="max-width: 18rem;">
-            <div class="card-header"><h3>${data[i].getName()}</h3><i class="fa-solid fa-mug-hot"></i> Manager
-            </div>
+          <div class="card-header"><h3>${data[i].getName()}</h3><i class="fa-solid fa-mug-hot"></i> Manager
+          </div>
             <div class="card-body text-dark">
               <h5 class="card-title"></h5>
               <p class="card-text"></p>
               <ul class="list-group">
                 <li class="list-group-item">id:${data[i].getId()}</li>
-                <li class="list-group-item">Email:<a href = "mailto:${data[i].getEmail()}"</a></li>
+                <li class="list-group-item">Email:<a href = "mailto:${data[i].getEmail()}">${data[i].getEmail()}</a></li>
                 <li class="list-group-item">Office number:${data[i].getOfficeNumber()}</li>
               </ul>
             </div>
-          </div>
+    </div>
     `;
       cards += str;
     } else if (data[i].getRole() == "Engineer") {
-      var str = `
+      let str = `
       <div class="card mb-3" style="max-width: 18rem;">
             <div class="card-header"><h3>${data[i].getName()}</h3><i class="fa-solid fa-glasses"></i> Engineer</div>
             <div class="card-body text-dark">
@@ -28,27 +28,27 @@ function generateCards(data) {
               <p class="card-text"></p>
               <ul class="list-group">
                 <li class="list-group-item">id:${data[i].getId()}</li>
-                <li class="list-group-item">Email:<a href = "mailto:${data[i].getEmail()}"</a></li>
-                <li class="list-group-item">GitHub:<a href = "https://github.com/ashachakre0906">${data[i].getGitHub()}</a></li>
+                <li class="list-group-item">Email:<a href = "mailto:${data[i].getEmail()}">${data[i].getEmail()}</a></li>
+                <li class="list-group-item">GitHub:<a href = "https://github.com/${data[i].getGitHub()}">${data[i].getGitHub()}</a></li>
               </ul>
             </div>
         </div>
       `;
       cards += str;
     } else if (data[i].getRole() == "Intern") {
-      var str = `
-      <div class="card mb-3" style="max-width: 18rem;">
+      let str = `
+       <div class="card mb-3" style="max-width: 18rem;">
           <div class="card-header"><h3>${data[i].getName()}</h3><i class="fa-solid fa-user-graduate"></i> Intern</div>
             <div class="card-body text-dark">
               <h5 class="card-title"></h5>
               <p class="card-text"></p>
               <ul class="list-group">
                 <li class="list-group-item">id:${data[i].getId()}</li>
-                <li class="list-group-item">Email:<a href = "mailto:${data[i].getEmail()}"</a></li>
+                <li class="list-group-item">Email:<a href = "mailto:${data[i].getEmail()}">${data[i].getEmail()}</a></li>
                 <li class="list-group-item">School:${data[i].getSchool()}</li>
               </ul>
             </div>
-      </div>
+        </div>
      `;
      cards += str;
     }
@@ -75,45 +75,8 @@ module.exports = (teamMembers) => {
                 <h1>My Team</h1>
             </span>
         </nav>
-    <div class ="card-container">
+      <div class ="card-container">
         ${generateCards(teamMembers)}
-        <div class="card mb-3" style="max-width: 18rem;">
-        <div class="card-header"><h3></h3><i class="fa-solid fa-mug-hot"></i> Manager
-        </div>
-        <div class="card-body text-dark">
-          <h5 class="card-title"></h5>
-          <p class="card-text"></p>
-          <ul class="list-group">
-            <li class="list-group-item">id:</li>
-            <li class="list-group-item">Email:<a href = "mailto:"</a></li>
-            <li class="list-group-item">Office number:</li>
-          </ul>
-        </div>
-       </div>
-        <div class="card mb-3" style="max-width: 18rem;">
-            <div class="card-header"><h3></h3><i class="fa-solid fa-glasses"></i> Engineer</div>
-            <div class="card-body text-dark">
-              <h5 class="card-title"></h5>
-              <p class="card-text"></p>
-              <ul class="list-group">
-                <li class="list-group-item">id:</li>
-                <li class="list-group-item">Email:<a href = "mailto:"</a></li>
-                <li class="list-group-item">GitHub:<a href = "https://github.com/ashachakre0906"></a></li>
-              </ul>
-            </div>
-        </div>
-        <div class="card mb-3" style="max-width: 18rem;">
-        <div class="card-header"><h3></h3><i class="fa-solid fa-user-graduate"></i> Intern</div>
-          <div class="card-body text-dark">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
-            <ul class="list-group">
-            <li class="list-group-item">id:</li>
-            <li class="list-group-item">Email:<a href = "mailto:"</a></li>
-              <li class="list-group-item">School:</li>
-            </ul>
-          </div>
-        </div>
       </div>       
     </body>
   </html>

@@ -5,6 +5,7 @@ describe("ManagerClass", () => {
     expect(engineer.name).toBe("Patt");
     expect(engineer.id).toBe("9087");
     expect(engineer.email).toBe("pattp@yahoo.com");
+    expect(engineer.github).toEqual("ashachakre0906")
   });
   it("test to check if we can get name from getName()method", () => {
     expect(engineer.getName()).toBe("Patt");
