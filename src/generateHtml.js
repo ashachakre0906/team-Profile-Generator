@@ -70,7 +70,7 @@ module.exports = (teamMembers) => {
         <title>Team Profile Generator</title>
     </head>
     <body>
-        <nav class="navbar navbar-dark bg-info justify-content-center align-items-center">
+        <nav class="navbar navbar-dark justify-content-center align-items-center">
             <span class="navbar-brand mb-0 h1">
                 <h1>My Team</h1>
             </span>
