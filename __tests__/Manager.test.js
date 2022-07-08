@@ -19,4 +19,7 @@ describe("ManagerClass", () => {
   it("test to check if we can get role from getRole()method", () => {
     expect(manager.getRole()).toBe("Manager");
   });
+  it("test to check if we can get role from getofficeNumber()method", () => {
+    expect(manager.getOfficeNumber()).toBe("1234");
+  });
 });
