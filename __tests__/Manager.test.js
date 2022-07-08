@@ -5,7 +5,7 @@ describe("ManagerClass", () => {
     expect(manager.name).toBe("John");
     expect(manager.id).toBe("9087");
     expect(manager.email).toBe("johnp@yahoo.com");
-    expect(manager.officeNumber).toBe("johnp@yahoo.com");
+    expect(manager.officeNumber).toBe("1234");
   });
   it("test to check if we can get name from getName()method", () => {
     expect(manager.getName()).toBe("John");
