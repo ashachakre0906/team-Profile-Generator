@@ -42,7 +42,7 @@ THEN I exit the application, and the HTML is generated
 ```
 Solution URL:(https://github.com/ashachakre0906/team-Profile-Generator)
 ## Application Demo
-[!Live gif](/dist/assets/images/team-profile.gif)(https://drive.google.com/file/d/1X7fo16XXLiZs6Yr8Qc6COQTPitZe7FGh/view?usp=sharing)
+![Live gif](/dist/assets/images/team-profile.gif)(https://drive.google.com/file/d/1X7fo16XXLiZs6Yr8Qc6COQTPitZe7FGh/view?usp=sharing)
 ## Installation
 * Install Node in your computer by going to `https://nodejs.org/en/download/`
 * Create .gitignore file before installing any npm dependencies and include node_modules/ and .DS_Store/ so that your node_modules directory isn't tracked or uploaded to GitHub.
