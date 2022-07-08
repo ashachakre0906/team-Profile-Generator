@@ -16,7 +16,7 @@ describe("ManagerClass", () => {
     expect(engineer.getEmail()).toBe("pattp@yahoo.com");
   });
   it("test to check if we can get github from getGithub()method", () => {
-    expect(engineer.getGithub()).toBe("ashachakre0906");
+    expect(engineer.getGitHub()).toEqual("ashachakre0906");
   });
   it("test to check if we can get role from getRole()method", () => {
     expect(engineer.getRole()).toBe("Engineer");
