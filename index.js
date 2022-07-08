@@ -1,8 +1,12 @@
+//node modules << fs for file system and inquirer Inquirer is an NPM package that provides 
+//an easy way to capture user input in your Node.js command line interface applications.
 const inquirer = require("inquirer");
 const fs = require("fs");
+//team profiles
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+//path to generate the index.html file
 const generateHtml = require("./src/generateHtml.js");
 const path = require ('path');
 
@@ -95,6 +99,11 @@ const internQuestions = [
         choices: ['Engineer','Intern','finish building the team'],
       }
   ];
+  //function add Manager<<inquirer.prompt prompting the questions of manager ,returning answers from the user 
+  //that can be accessed by a .then promise function
+  //storing the response in to new instance of the object"manager" and pushing it to teamMembers array.
+  //Switch case statement defines Inside the curly braces different cases are defined followed by a value to be strictly matched with the evaluated expression.
+   //if the case is engineer calls addEngineer().if the case is Intern calls addIntern().
 function addManager() {
     inquirer.prompt(managerQuestions).then((managerResponse) => {
       console.log(managerResponse);
@@ -113,7 +122,7 @@ function addManager() {
             addIntern();
             break;
         default : 
-        return writeToFile(teamMembers);       
+        return writeToFile(teamMembers); //default is executed when none of the cases match the evaluated expression.      
       }
     });
   }
@@ -161,7 +170,8 @@ function addIntern() {
       }
   });
 }
- addManager();
+ addManager();//call addManager function
+ //function to write to file 
 function writeToFile(data) {
 fs.writeFile('./dist/index.html', generateHtml(data),'utf-8',(err) =>{
   if (err)

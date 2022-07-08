@@ -1,6 +1,7 @@
+//store the generated cards for manager, engineer and intern
 let cards = "";
 console.log(cards);
-//forloop which will generate cards based on the getRole method
+//forloop which will generate cards based on the getRole method for Manager, Engineer and Intern
 function generateCards(data) {
   for (let i = 0; i < data.length; i++) {
     if (data[i].getRole() == "Manager") {
@@ -12,9 +13,9 @@ function generateCards(data) {
               <h5 class="card-title"></h5>
               <p class="card-text"></p>
               <ul class="list-group">
-                <li class="list-group-item">id:${data[i].getId()}</li>
-                <li class="list-group-item">Email:<a href = "mailto:${data[i].getEmail()}">${data[i].getEmail()}</a></li>
-                <li class="list-group-item">Office number:${data[i].getOfficeNumber()}</li>
+                <li class="list-group-item">id: ${data[i].getId()}</li>
+                <li class="list-group-item">Email: <a href = "mailto:${data[i].getEmail()}">${data[i].getEmail()}</a></li>
+                <li class="list-group-item">Office number: ${data[i].getOfficeNumber()}</li>
               </ul>
             </div>
          </div>
@@ -28,9 +29,9 @@ function generateCards(data) {
               <h5 class="card-title"></h5>
               <p class="card-text"></p>
               <ul class="list-group">
-                <li class="list-group-item">id:${data[i].getId()}</li>
-                <li class="list-group-item">Email:<a href = "mailto:${data[i].getEmail()}">${data[i].getEmail()}</a></li>
-                <li class="list-group-item">GitHub:<a href = "https://github.com/${data[i].getGitHub()}">${data[i].getGitHub()}</a></li>
+                <li class="list-group-item">id: ${data[i].getId()}</li>
+                <li class="list-group-item">Email: <a href = "mailto:${data[i].getEmail()}">${data[i].getEmail()}</a></li>
+                <li class="list-group-item">GitHub: <a href = "https://github.com/${data[i].getGitHub()}">${data[i].getGitHub()}</a></li>
               </ul>
             </div>
         </div>
@@ -44,9 +45,9 @@ function generateCards(data) {
               <h5 class="card-title"></h5>
               <p class="card-text"></p>
               <ul class="list-group">
-                <li class="list-group-item">id:${data[i].getId()}</li>
-                <li class="list-group-item">Email:<a href = "mailto:${data[i].getEmail()}">${data[i].getEmail()}</a></li>
-                <li class="list-group-item">School:${data[i].getSchool()}</li>
+                <li class="list-group-item">id: ${data[i].getId()}</li>
+                <li class="list-group-item">Email: <a href = "mailto:${data[i].getEmail()}">${data[i].getEmail()}</a></li>
+                <li class="list-group-item">School: ${data[i].getSchool()}</li>
               </ul>
           </div>
         </div>
@@ -56,7 +57,7 @@ function generateCards(data) {
   }
   return cards;
 }
-
+//module.exports is exporting the entire index.html page
 module.exports = (teamMembers) => {
   return `
   <!DOCTYPE html>
