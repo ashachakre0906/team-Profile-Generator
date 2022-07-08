@@ -8,18 +8,18 @@ describe("ManagerClass", () => {
     expect(intern.school).toEqual("SJSU");
   });
   it("test to check if we can get name from getName()method", () => {
-    expect(intern.getName()).toBe("Harry");
+    expect(intern.getName()).toEqual("Harry");
   });
   it("test to check if we can get id from getId()method", () => {
-    expect(intern.getId()).toBe("9087");
+    expect(intern.getId()).toEqual("9087");
   });
   it("test to check if we can get email address from getEmail()method", () => {
-    expect(intern.getEmail()).toBe("harry@yahoo.com");
+    expect(intern.getEmail()).toEqual("harry@yahoo.com");
   });
   it("test to check if we can get github from getSchool()method", () => {
     expect(intern.getSchool()).toEqual("SJSU");
   });
   it("test to check if we can get role from getRole()method", () => {
-    expect(intern.getRole()).toBe("Intern");
+    expect(intern.getRole()).toEqual("Intern");
   });
 });

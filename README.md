@@ -41,7 +41,7 @@ WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
 ```
 ## Application Demo
-
+[!CLI gif]()(https://drive.google.com/file/d/1KthBf2Uv849gXzy6Y52v5cWi9oNwm4TK/view "video")
 ## Installation
 * Install Node in your computer by going to `https://nodejs.org/en/download/`
 * Create .gitignore file before installing any npm dependencies and include node_modules/ and .DS_Store/ so that your node_modules directory isn't tracked or uploaded to GitHub.
