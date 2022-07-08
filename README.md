@@ -13,7 +13,7 @@
   - [Technologies Used](#technologies-used)
   - [Questions](#questions)
 ## Description
-Challenge is to build a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person. We will also write unit tests for each part of your code and ensure that it passes all of them.
+Challenge is to build a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person. We will also write unit tests for each part of our code and ensure that it passes all of them.
 ## User Story
 ```
 AS A manager
@@ -40,8 +40,9 @@ THEN I am prompted to enter the intern’s name, ID, email, and school, and I am
 WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
 ```
+Solution URL:(https://github.com/ashachakre0906/team-Profile-Generator)
 ## Application Demo
-[!CLI gif]()(https://drive.google.com/file/d/1KthBf2Uv849gXzy6Y52v5cWi9oNwm4TK/view "video")
+[!Live gif](/dist/assets/images/team-profile.gif)(https://drive.google.com/file/d/1X7fo16XXLiZs6Yr8Qc6COQTPitZe7FGh/view?usp=sharing)
 ## Installation
 * Install Node in your computer by going to `https://nodejs.org/en/download/`
 * Create .gitignore file before installing any npm dependencies and include node_modules/ and .DS_Store/ so that your node_modules directory isn't tracked or uploaded to GitHub.
@@ -67,19 +68,28 @@ fs.writeFile('./dist/index.html', generateHtml(data),'utf-8',(err) =>{
 })
 };
 ```
-
+## Tests
+Our application is using Jest for running the unit tests for.In order to run jest tests for Employee,Engineer,Intern and Manager we enter the command in the terminal
+```
+npm run test
+```
 ## Contributing
 not applicable at this time.
 ## License
 This project is license under [License: MIT](https://opensource.org/licenses/MIT)
-## Tests
-We dont have any test at this moment.
 ## Technologies Used
-![Javascript Badge](https://img.shields.io/badge/language-Javascript-blue.svg)
-![Node.js Badge](https://img.shields.io/badge/language-Node-yellow.svg)
-![Express.js Badge](https://img.shields.io/badge/language-Express-blue.svg)
-![Inquirer Badge](https://img.shields.io/badge/language-Inquirer-orange.svg)
+![HTML Badge](https://img.shields.io/badge/HTML-orange.svg)
+![CSS Badge](https://img.shields.io/badge/CSS-purple.svg)
+![Javascript Badge](https://img.shields.io/badge/Javascript-blue.svg)
+![Node.js Badge](https://img.shields.io/badge/Node-yellow.svg)
+![Inquirer Badge](https://img.shields.io/badge/Inquirer-orange.svg)
+![Bootstrap Badge](https://img.shields.io/badge/Bootstrap-darkblue.svg)
+![Jest Badge](https://img.shields.io/badge/Jest-grey.svg)
 
 ## Questions
-Github Repo URL: [Github](https://github.com/ashachakre0906/team-Profile-Generator)<br>
+if you have any questions please reach out to me @ 
+Email Address: chourpagar.asha@gmail.com
+Github Repo URL:[GitHub](https://github.com/ashachakre0906)
+
+
 
