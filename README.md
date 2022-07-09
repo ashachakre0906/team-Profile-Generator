@@ -105,7 +105,7 @@ npm run test
 ## Contributing
 not applicable at this time.
 ## License
-This project is license under [License: MIT](https://opensource.org/licenses/MIT)
+This project is license under [MIT](https://choosealicense.com/licenses/mit/)
 ## Technologies Used
 ![HTML Badge](https://img.shields.io/badge/HTML-orange.svg)
 ![CSS Badge](https://img.shields.io/badge/CSS-purple.svg)
