@@ -1,7 +1,8 @@
 //store the generated cards for manager, engineer and intern
 let cards = "";
 console.log(cards);
-//forloop which will generate cards based on the getRole method for Manager, Engineer and Intern
+//forloop which will generate cards based on the getRole method for Manager, Engineer and Intern and will store the card 
+//into the variable cards.
 function generateCards(data) {
   for (let i = 0; i < data.length; i++) {
     if (data[i].getRole() == "Manager") {

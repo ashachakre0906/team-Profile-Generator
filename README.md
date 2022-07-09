@@ -13,7 +13,17 @@
   - [Technologies Used](#technologies-used)
   - [Questions](#questions)
 ## Description
-Challenge is to build a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person. We will also write unit tests for each part of our code and ensure that it passes all of them.
+Challenge is to build a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays that displays a nicely formatted team roster based on user input and summaries for each person. We will also write unit tests for each part of our code and ensure that it passes all of them.
+
+[Solution URL](https://github.com/ashachakre0906/team-Profile-Generator)
+## Application Demo
+![Live gif](/dist/assets/images/team-profile.gif)
+[Screencastify link](https://drive.google.com/file/d/1X7fo16XXLiZs6Yr8Qc6COQTPitZe7FGh/view?usp=sharing)
+***The following image shows the generated HTML’s appearance and functionality in large screen***
+<img src = "/dist/assets/images/team-profile.png" alt = "image of team profile">
+***The following image of a webpage is Responsive you can shrink the size and set the appropriate responsive breakpoints***
+<img src = "/dist/assets/images/team-profile-responsive.png" alt = "image of team profile">
+
 ## User Story
 ```
 AS A manager
@@ -40,10 +50,6 @@ THEN I am prompted to enter the intern’s name, ID, email, and school, and I am
 WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
 ```
-[Solution URL](https://github.com/ashachakre0906/team-Profile-Generator)
-## Application Demo
-![Live gif](/dist/assets/images/team-profile.gif)
-[Screencastify link](https://drive.google.com/file/d/1X7fo16XXLiZs6Yr8Qc6COQTPitZe7FGh/view?usp=sharing)
 ## Installation
 * Install Node in your computer by going to `https://nodejs.org/en/download/`
 * Create .gitignore file before installing any npm dependencies and include node_modules/ and .DS_Store/ so that your node_modules directory isn't tracked or uploaded to GitHub.
@@ -55,22 +61,40 @@ THEN I exit the application, and the HTML is generated
 ```bash
 node index.js
 ```
+* Our application is using Jest package for running the suite of unit tests.Install Jest using npm:`npm install --save-dev jest`.Once the package is succesfully installed Add the following section to your package.json:
+```
+{
+  "scripts": {
+    "test": "jest"
+  }
+}
+```
 ## Usage
 ### Code Examples and Screenshots
-***Function to writeToFile which we collect the data and generate index.html file***
+***Function generateCards() will generate the cards dynamically for Manager,Employee and Intern through forloop. ***
 ```
-function writeToFile(data) {
-fs.writeFile('./dist/index.html', generateHtml(data),'utf-8',(err) =>{
-  if (err)
-  console.log(err);
-  else {
-      console.log('"Success! Your team profile has been generated"')
-  }
-})
-};
+function generateCards(data) {
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].getRole() == "Manager") {
+      let str = `
+         <div class="card mb-3" style="max-width: 18rem;">
+            <div class="card-header"><h3>${data[i].getName()}</h3><i class="fa-solid fa-mug-hot"></i> Manager
+            </div>
+            <div class="card-body text-dark">
+              <h5 class="card-title"></h5>
+              <p class="card-text"></p>
+              <ul class="list-group">
+                <li class="list-group-item">id: ${data[i].getId()}</li>
+                <li class="list-group-item">Email: <a href = "mailto:${data[i].getEmail()}">${data[i].getEmail()}</a></li>
+                <li class="list-group-item">Office number: ${data[i].getOfficeNumber()}</li>
+              </ul>
+            </div>
+         </div>
+    `;
+      cards += str;
 ```
 ## Tests
-Our application is using Jest for running the unit tests for.In order to run jest tests for Employee,Engineer,Intern and Manager we enter the command in the terminal
+Our application is using Jest package for running the suite of unit tests.In order to run jest tests for Employee,Engineer,Intern and Manager classes we need to enter the following command in the terminal.All the tests must PASS.
 ```
 npm run test
 ```
