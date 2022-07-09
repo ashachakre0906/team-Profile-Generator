@@ -75,7 +75,7 @@ node index.js
 ```
 ## Usage
 ### Code Examples and Screenshots
-***Function generateCards() will generate the cards dynamically for Manager,Employee and Intern through forloop. ***
+***Function generateCards() will generate the cards dynamically for Manager,Employee and Intern through forloop***
 ```
 function generateCards(data) {
   for (let i = 0; i < data.length; i++) {
