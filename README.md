@@ -25,6 +25,7 @@ Challenge is to build a Node.js command-line application that takes in informati
 <img src = "/dist/assets/images/team-profile.png" alt = "image of team profile">
 
 ***The following image of a webpage is Responsive you can shrink the size and set the appropriate responsive breakpoints***
+
 <img src = "/dist/assets/images/team-profile-responsive.png" alt = "image of team profile">
 
 ## User Story
