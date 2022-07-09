@@ -18,9 +18,12 @@ Challenge is to build a Node.js command-line application that takes in informati
 [Solution URL](https://github.com/ashachakre0906/team-Profile-Generator)
 ## Application Demo
 ![Live gif](/dist/assets/images/team-profile.gif)
+
 [Screencastify link](https://drive.google.com/file/d/1X7fo16XXLiZs6Yr8Qc6COQTPitZe7FGh/view?usp=sharing)
+
 ***The following image shows the generated HTML’s appearance and functionality in large screen***
 <img src = "/dist/assets/images/team-profile.png" alt = "image of team profile">
+
 ***The following image of a webpage is Responsive you can shrink the size and set the appropriate responsive breakpoints***
 <img src = "/dist/assets/images/team-profile-responsive.png" alt = "image of team profile">
 
